@@ -48,7 +48,6 @@
                         <p class="text-white-50">About plants is a page dedicated to beautiful plants, flowers and miscellaneous greenery. Living things that do not talk fill me with joy, and even though with the right equipment one may hear a harvested carrot scream in agony, most plants tend to keep quiet.</p>
                     </div>
                 </section>
-                
                 <div class="slideshow-container">
 
                     <div class="mySlides fade">
@@ -81,6 +80,7 @@
                 <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
                     <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="https://kaboompics.com/cache/a/c/3/7/a/ac37a8321117362b682778400ae9b2e85f9a3fa0.jpeg" alt="Monstera" width="960" height="445" /></div>
                     <div class="col-xl-4 col-lg-5">
+                       
                         <div class="featured-text text-center text-lg-left">
                             <h4>The Swiss Cheese plant</h4>
                             <p class="text-black-50 mb-0">The Swiss cheese plant, <i>Monstera adansonii</i>, gets its common name from its large, heart-shaped leaves that develop holes as the plant ages. This makes the leaves resemble Swiss cheese. Native to Central and South America, the Swiss cheese plant is a tropical perennial that's typically grown as a houseplant. Like its cousin <i>Monstera Deliciosa</i>, Monstera adansonii has a fast growth rate and a vining habit. It's important to note that all parts of Monstera plants are toxic to pets.</p>
@@ -94,7 +94,7 @@
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
                                     <h4 class="text-white">The Rubber plant</h4>
-                                    <p class="mb-0 text-white-50">The rubber plant, <i>Ficus Elastica Robusta</i>, is a popular ornamental plant from the Ficus genus. In it's natural habitat it grows over 30 metres tall, however, the varieties grown indoors are a much more manageable height.
+                                    <p class="mb-0 text-white-50">The Rubber plant, <i>Ficus Elastica Robusta</i>, is a popular ornamental plant from the Ficus genus. In it's natural habitat it grows over 30 metres tall, however, the varieties grown indoors are a much more manageable height.
                                         For the indoor grower looking for a tree type plant species with attractive foliage which can grow from 1ft to over 8ft tall, this is an excellent choice.</p>
                                     <hr class="d-none d-lg-block mb-0 ms-0" />
                                 </div>
@@ -120,8 +120,28 @@
         </section>
         <section class="signup-section" id="signup">
             <div class="container px-4 px-lg-5">
-        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-        <button onclick="myFunction()">Try it</button>
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-10 col-lg-6 mx-auto text-center">
+                        <h3 id="token">I have something for you</h3><br/>
+                        <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            
+                            <div class="row input-group-newsletter">
+                                <div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div><br/>
+                                <br>
+                                <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Enter!</button></div>
+                            </div>
+                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is required.</div>
+                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email is not valid.</div>
+
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3 mt-2 text-white">
+                                    <div id="thanks" class="fw-bolder"><br/>Thanks for stopping by!<br/><br/><img src="https://raw.githubusercontent.com/peppisusanna/aboutplants/main/img/omppu.PNG" alt="Apple" width="70" height="80"></div>
+                                   
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
+                        </form>
                     </div>
                 </div>
             </div>
