@@ -1,15 +1,5 @@
-/*!
-* Start Bootstrap - Grayscale v7.0.4 (https://startbootstrap.com/theme/grayscale)
-* Copyright 2013-2021 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
-
 window.addEventListener('DOMContentLoaded', event => {
 
-    // Navbar shrink function
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
         if (!navbarCollapsible) {
@@ -23,10 +13,8 @@ window.addEventListener('DOMContentLoaded', event => {
 
     };
 
-    // Shrink the navbar 
     navbarShrink();
 
-    // Shrink the navbar when page is scrolled
     document.addEventListener('scroll', navbarShrink);
 
     // Activate Bootstrap scrollspy on the main nav element
@@ -37,8 +25,6 @@ window.addEventListener('DOMContentLoaded', event => {
             offset: 74,
         });
     };
-
-    // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
     const responsiveNavItems = [].slice.call(
         document.querySelectorAll('#navbarResponsive .nav-link')
@@ -52,36 +38,22 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
-$( '.js-input' ).keyup(function() {
-    if( $(this).val() ) {
-       $(this).addClass('not-empty');
-    } else {
-       $(this).removeClass('not-empty');
-    }
-  });
-  var slideIndex = 1;
-  showSlides(slideIndex);
-  
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
   }
-  
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace("active", "");
   }
-  
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}    
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); 
+}
