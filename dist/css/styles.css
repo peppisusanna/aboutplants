@@ -11683,6 +11683,9 @@ body {
 .footer {
   padding: 5rem 0;
 }
+#yoga {
+  text-size: 1,2em;
+}
 #kehikko1 {
   background-color: rgba(27,35,23, 100%);
 }
