@@ -3,29 +3,38 @@
   }
   
   body {
-    margin: 0;
+    margin: 80;
     font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 14px;
-    background-image: url(https://assets.codepen.io/6093409/river.jpg);
+    background-image: url(https://raw.githubusercontent.com/peppisusanna/aboutplants/main/dist/assets/img/pexels-errin-casano-2356087.jpg);
     background-size: cover;
   }
-  
-  #myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
+  #eka {
+      padding-left: 50px;
+      margin-left: 100px;
+      padding-top: 10%;
+      width: 80%;
+      height: 500px;
+  }
+  #toka {
+      padding-right:0px;
+      padding-left: 10%;
+      margin-right: 100px;
+      padding-top: 20%;
+      width: 80%;
+      height: 500px;
   }
   
   .content {
-    position: fixed;
+    position: auto;
     bottom: 0;
-    background: rgba(106,123,118, 0.5);
+    background: rgba(164, 183, 196, 0.5);
     color: #f1f1f1;
     width: 100%;
-    padding: 30px;
+    padding: 20px;
+    padding-left: 40px;
   }
+
   
   #myBtn {
     width: 100px;
@@ -49,27 +58,11 @@
     box-sizing: border-box;
   }
   
-  /* Create two equal columns that floats next to each other */
   .column {
     float: left;
     width: 50%;
     padding: 10px;
-    height: 300px; /* Should be removed. Only for demonstration */
+    height: 300px;
   }
   
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+  
